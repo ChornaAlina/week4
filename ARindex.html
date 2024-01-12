@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+    <meta charset="utf-8">
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+
+    <a-scene  embedded arjs='debugUIEnabled: false; '>
+        <!-- <a-marker preset='hiro' >
+        <a-box position='0 0.5 0' material='color: red'></a-box>
+        </a-marker>
+        
+        <a-marker preset='kanji' >
+        <a-box position='0 0.5 0' material='color: blue'></a-box>
+        </a-marker>
+
+        <a-marker present='hiro' >
+        <a-box position='0 0.5 0' material='color: red'></a-box>
+        </a-marker>
+    <a-entity camera></a-entity> -->
+
+    <a-marker preset="hiro" id='marker-hiro' registerevents>
+        <a-box position='0 0.5 0' material='color: red;' jump></a-box>
+        </a-marker>
+        <a-marker preset="kanji" id='marker-kanji' registerevents>
+        <a-box position='0 0.5 0' material='color:blue;' jump></a-box>
+        </a-marker>
+        <a-marker type='pattern' url='pattern.patt'
+        registerevents>
+        <a-sphere position='0 0.5 0' radius="0.5"
+        material='color: green;' jump></a-sphere>
+        </a-marker>
+        <a-entity camera><a-cursor></a-cursor></a-entity>
+    </a-scene>  
+
+
+    
+</html>
+
+
+
+
